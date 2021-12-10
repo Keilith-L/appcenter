@@ -20,7 +20,7 @@
 public class AppCenter.Widgets.StripeDialog : Granite.Dialog {
     public signal void download_requested ();
 
-    private const string HOUSTON_URI = "https://developer.elementary.io/api/payment/%s";
+    private const string HOUSTON_URI = "https://beta.developer.elementary.io/api/payment/%s";
     private const string HOUSTON_PAYLOAD = "{ "
                                 + "\"data\": {"
                                     + "\"key\": \"%s\","
