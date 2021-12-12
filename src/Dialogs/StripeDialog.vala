@@ -456,6 +456,7 @@ public class AppCenter.Widgets.StripeDialog : Granite.Dialog {
                     var token_id = root_object.get_string_member ("id");
                     string? houston_data = post_to_houston (stripe_key, app_id, token_id, email_entry.text, (amount * 100).to_string ());
                     if (houston_data != null) {
+                        debug ("Houston API endpoint: %s", HOUSTON_URI.printf (app_id));
                         debug ("Houston data:%s", houston_data);
                         parser.load_from_data (houston_data);
                         root_object = parser.get_root ().get_object ();
